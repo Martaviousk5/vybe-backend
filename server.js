@@ -42,7 +42,7 @@ const UserSchema = new mongoose.Schema({
   verified: { type: Boolean, default: false },
   vybeplus: {
     active: { type: Boolean, default: false },
-    plan: { type: String, enum: ['monthly', 'annual', 'lifetime'], default: null },
+    plan: { type: String, enum: ['monthly', 'annual', 'lifetime'], default: 'monthly' },
     expiresAt: Date
   },
   followers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
